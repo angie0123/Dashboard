@@ -2,14 +2,21 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  --font-color: black;
+  font-family: "Poppins", sans-serif;
+  --font-color: #222;
+  --secondary-font-color: #2b2b2b;
   --bglight: #fefefa;
+  --primary-card-color: #6da06d;
+  --secondary-card-color: palegoldenrod;
+  --tertiary-card-color: rgb(127, 174, 192);
 }
 
 .container {
   display: grid;
   grid-template-columns: 1fr 4fr;
   height: 100vh;
+  background-color: var(--bglight);
+  color: var(--font-color);
 }
 
 .sidebar {
@@ -21,7 +28,6 @@
   row-gap: 40px;
   align-items: start;
   grid-template-rows: 1fr 12fr;
-  background: palegreen;
 }
 
 .logo {
@@ -117,7 +123,6 @@ nav a {
 
 .header-bottom .button:hover {
   cursor: pointer;
-  color: gainsboro;
 }
 
 .header-bottom .welcome-message {
@@ -163,7 +168,7 @@ nav a {
 
 .projects .article {
   border-radius: 15px;
-  background: palegreen;
+  background: var(--primary-card-color);
   padding: 23px;
   display: grid;
   grid-template-rows: 1fr 4fr 1fr;
@@ -178,6 +183,7 @@ nav a {
 .projects .blurb {
   font-size: 1.2rem;
   line-height: 1.5rem;
+  color: var(--secondary-font-color);
 }
 .actions {
   justify-self: end;
@@ -188,7 +194,7 @@ nav a {
 
 .announcements {
   border-radius: 15px;
-  background: palegoldenrod;
+  background: var(--secondary-card-color);
   padding: 26px;
 }
 
@@ -213,12 +219,13 @@ nav a {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  color: var(--secondary-font-color);
 }
 
 .trending {
   border-radius: 15px;
   padding: 26px;
-  background: lightskyblue;
+  background: var(--tertiary-card-color);
   display: grid;
   grid-template-rows: 1fr 8fr;
 }
@@ -251,5 +258,5 @@ nav a {
 }
 
 .trending .title {
-  color: rgba(0, 0, 0, 0.7);
+  color: var(--secondary-font-color);
 }
